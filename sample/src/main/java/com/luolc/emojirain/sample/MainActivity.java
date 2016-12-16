@@ -1,6 +1,5 @@
 package com.luolc.emojirain.sample;
 
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
@@ -56,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mContainer.addEmoji(BitmapFactory.decodeResource(getResources(), R.drawable.emoji_1_3));
-        mContainer.addEmoji(BitmapFactory.decodeResource(getResources(), R.drawable.emoji_2_3));
-        mContainer.addEmoji(BitmapFactory.decodeResource(getResources(), R.drawable.emoji_3_3));
-        mContainer.addEmoji(BitmapFactory.decodeResource(getResources(), R.drawable.emoji_4_3));
-        mContainer.addEmoji(BitmapFactory.decodeResource(getResources(), R.drawable.emoji_5_3));
+        mContainer.addEmoji(R.drawable.emoji_1_3);
+        mContainer.addEmoji(R.drawable.emoji_2_3);
+        mContainer.addEmoji(R.drawable.emoji_3_3);
+        mContainer.addEmoji(R.drawable.emoji_4_3);
+        mContainer.addEmoji(R.drawable.emoji_5_3);
     }
 
     private boolean checkInputParams(EditText... params) {
