@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="please_input_all_params">请输入所有参数</string>
+    <string name="emojis_per_flow">每次掉落个数</string>
+    <string name="total_duration">总时长(ms)</string>
+    <string name="average_drop_duration">单次掉落平均时长(ms)</string>
+    <string name="drop_frequency">掉落频率(ms)</string>
+    <string name="start_dropping">掉！</string>
+</resources>

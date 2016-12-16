@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EmojiRainLayout">
+        <attr name="per" format="integer"/>
+        <attr name="duration" format="integer"/>
+        <attr name="dropDuration" format="integer"/>
+        <attr name="dropFrequency" format="integer"/>
+    </declare-styleable>
+</resources>

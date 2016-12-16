@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EmojiRain Sample</string>
+    <string name="please_input_all_params">Please input all params</string>
+    <string name="emojis_per_flow">Emojis per flow</string>
+    <string name="total_duration">Total duration(ms)</string>
+    <string name="average_drop_duration">Average drop duration(ms)</string>
+    <string name="drop_frequency">Drop frequency(ms)</string>
+    <string name="start_dropping">Start dropping！</string>
+</resources>
