@@ -41,3 +41,10 @@ dependencies {
     compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
     compile "com.annimon:stream:$rootProject.streamVersion";
 }
+
+ext {
+    PUBLISH_GROUP_ID = 'com.luolc'
+    PUBLISH_ARTIFACT_ID = 'emoji-rain'
+    PUBLISH_VERSION = '0.1.0'
+}
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
