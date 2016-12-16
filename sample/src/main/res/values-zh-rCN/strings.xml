@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">EmojiRain Sample</string>
     <string name="please_input_all_params">请输入所有参数</string>
     <string name="emojis_per_flow">每次掉落个数</string>
     <string name="total_duration">总时长(ms)</string>
