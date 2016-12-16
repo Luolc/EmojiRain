@@ -1,18 +1,16 @@
-#### [中文版文档](https://github.com/Luolc/EmojiRain/blob/master/README-cn.md)
-
 # Emoji Rain
 
 <img src='https://raw.githubusercontent.com/Luolc/EmojiRain/master/ohters/dropping-demo.gif' width="300px" style='border: #f1f1f1 solid 1px'/>
 
-Hey, it's emoji raining!
+掉表情包咯~
 
-This is a really simple and funny animation for Android. You can see similar animations when sending "Happy birthday" or something else special in WeChat app.
+这是一个特别小巧的Android掉emoji表情包实现。效果类似于微信中发送"生日快乐"和"么么哒"之类的词语时触发的动画效果。
 
-Now you can add this funny thing to your own app. Give your users a surprise on Christmas Day by dropping emojis! :D
+现在你也可以把这个有趣的特性加入自己的app啦~在圣诞节的时候给用户掉圣诞树emoji吧~ :D
 
-## Usage
+## 使用
 
-#### Gradle dependency
+#### Gradle依赖
 
 ```gradle
 dependencies {
@@ -20,18 +18,18 @@ dependencies {
 }
 ```
 
-#### Config
+#### 参数配置
 
 - per
-    - How many emojis will dropping in each flow, default 6
+    - 每一波掉落的emoji个数，默认6个
 - duration
-    - The total duration of the animation, default 8000ms
+    - 掉落动画持续的总时长，默认8000ms
 - dropDuration
-    - The average dropping duration for a specific emoji, default 2400ms
+    - 每个emoji掉落时长的平均值，默认2400ms
 - dropFrequency
-    - The interval between two flows, default 500ms
+    - 掉落频率，即每两拨的时间间隔，默认500ms
 
-Config in layout. `EmojiRainLayout` inherits from `FrameLayout`. You can just use it as a native `FrameLayout` view.
+在layout中配置。 `EmojiRainLayout`继承自`FrameLayout`，你完全可以把它当做原生的`FrameLayout`使用。
 
 ```xml
 <com.luolc.emojirain.EmojiRainLayout
@@ -54,7 +52,7 @@ Config in layout. `EmojiRainLayout` inherits from `FrameLayout`. You can just us
 </com.luolc.emojirain.EmojiRainLayout>
 ```
 
-Config in java code.
+在Java代码中配置。
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -91,21 +89,21 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-Start animation.
+开始掉落。
 ```java
 mContainer.startDropping();
 ```
 
-Stop animation.
+停止掉落。
 ```java
 mContainer.stopDropping();
 ```
 
-## Compatibility
+## 兼容性
 
 Android midSdkVersion 14.
 
-## License
+## 许可证
 
     Copyright 2016, Liangchen Luo.
 
