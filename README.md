@@ -4,11 +4,11 @@
 
 <img src='https://raw.githubusercontent.com/Luolc/EmojiRain/master/ohters/dropping-demo.gif' width="300px" style='border: #f1f1f1 solid 1px'/>
 
-Hey, it's emoji raining!
+Hey, it's raining emoji!
 
-This is a really simple and funny animation for Android. You can see similar animations when sending "Happy birthday" or something else special in WeChat app.
+This is a really simple and funny animation for Android. You could find similar animations when sending "Happy birthday" or something else special in WeChat app.
 
-Now you can add this funny thing to your own app. Give your users a surprise on Christmas Day by dropping emojis! :D
+Now you are able to add this funny thing to your own app as well. Give a surprise to your users on Christmas Day by dropping emojis! :D
 
 ## Usage
 
