@@ -1,71 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.luolc.emojirain.EmojiRainLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/group_emoji_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.luolc.emojirain.sample.MainActivity">
+<com.luolc.emojirain.EmojiRainLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_emoji_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.luolc.emojirain.sample.MainActivity">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/container_padding">
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/container_padding"
-            android:orientation="vertical">
-
-        <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            android:layout_height="wrap_content">
 
             <EditText
-                    android:inputType="number"
-                    android:id="@+id/et_per"
-                    android:hint="@string/emojis_per_flow"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                android:id="@+id/et_per"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/emojis_per_flow"
+                android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <EditText
-                    android:inputType="number"
-                    android:id="@+id/et_duration"
-                    android:hint="@string/total_duration"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                android:id="@+id/et_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/total_duration"
+                android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <EditText
-                    android:inputType="number"
-                    android:id="@+id/et_drop_duration"
-                    android:hint="@string/average_drop_duration"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                android:id="@+id/et_drop_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/average_drop_duration"
+                android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <EditText
-                    android:inputType="number"
-                    android:id="@+id/et_frequency"
-                    android:hint="@string/drop_frequency"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                android:id="@+id/et_frequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/drop_frequency"
+                android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
         <Button
-                android:layout_marginTop="36dp"
-                android:id="@+id/btn_drop"
-                android:text="@string/start_dropping"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            android:id="@+id/btn_drop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/start_dropping" />
+
+        <Button
+            android:id="@+id/btn_stop_dropping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/stop_dropping" />
     </LinearLayout>
 </com.luolc.emojirain.EmojiRainLayout>

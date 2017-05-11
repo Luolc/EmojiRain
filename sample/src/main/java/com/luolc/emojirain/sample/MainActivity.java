@@ -46,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
         mContainer.setDropDuration(dropDuration);
         mContainer.setDropFrequency(frequency);
 
-        mContainer.startDropping();
+        mContainer.startDrop();
+    }
+
+    @OnClick(R.id.btn_stop_dropping)
+    void onClickStop() {
+        mContainer.stopDrop();
     }
 
     @Override

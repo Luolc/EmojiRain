@@ -7,4 +7,6 @@
     <string name="average_drop_duration">单次掉落平均时长(ms)</string>
     <string name="drop_frequency">掉落频率(ms)</string>
     <string name="start_dropping">掉！</string>
+    <string name="stop_dropping">停！</string>
+
 </resources>
