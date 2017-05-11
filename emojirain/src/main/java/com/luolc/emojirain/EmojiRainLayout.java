@@ -7,6 +7,8 @@ import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.DrawableRes;
 import android.support.percent.PercentFrameLayout;
 import android.support.v4.content.ContextCompat;
@@ -38,6 +40,8 @@ import rx.subscriptions.CompositeSubscription;
 
 public class EmojiRainLayout extends PercentFrameLayout {
 
+    private static final int DROP_EMOJI = 0;
+
     private static int EMOJI_STANDARD_SIZE;
 
     private static final float RELATIVE_DROP_DURATION_OFFSET = 0.25F;
@@ -65,6 +69,7 @@ public class EmojiRainLayout extends PercentFrameLayout {
     private List<Drawable> mEmojis;
 
     private Pools.SynchronizedPool<ImageView> mEmojiPool;
+    private int mDropTimes;
 
     {
         EMOJI_STANDARD_SIZE = dip2px(36);
@@ -123,6 +128,11 @@ public class EmojiRainLayout extends PercentFrameLayout {
         mSubscriptions.clear();
     }
 
+    public void stopDrop() {
+        mHander.removeMessages(DROP_EMOJI);
+        mDropTimes = -1;
+    }
+
     /**
      * Start dropping animation.
      * The animation will last for n flow(s), which n is {@code mDuration}
@@ -146,6 +156,35 @@ public class EmojiRainLayout extends PercentFrameLayout {
                 .subscribe(this::startDropAnimationForSingleEmoji, Throwable::printStackTrace);
         mSubscriptions.add(subscription);
     }
+
+    public void startDrop() {
+        initEmojisPool();
+        Randoms.setSeed(7);
+        mWindowHeight = getWindowHeight();
+
+        mDropTimes = mDuration / mDropFrequency;
+        mHander.sendEmptyMessage(DROP_EMOJI);
+    }
+
+    private Handler mHander = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if(msg.what == DROP_EMOJI) {
+                if(mDropTimes > 0) {
+                    mDropTimes--;
+                    System.out.println("" + mDropTimes);
+                    for (int i = 0; i < mEmojiPer; i++) {
+                        ImageView acquire = mEmojiPool.acquire();
+                        if(acquire != null) {
+                            startDropAnimationForSingleEmoji(acquire);
+                        }
+                    }
+                    sendEmptyMessageDelayed(DROP_EMOJI, mDropFrequency);
+                }
+            }
+        }
+    };
 
     private void init(Context context, AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.EmojiRainLayout);
@@ -183,6 +222,7 @@ public class EmojiRainLayout extends PercentFrameLayout {
             public void onAnimationRepeat(Animation animation) {}
         });
         emoji.startAnimation(translateAnimation);
+
     }
 
     private int getWindowHeight() {
